@@ -1,0 +1,9 @@
+HTTP/2.0 200 OK
+Content-Length: 303
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Thu, 26 May 2022 08:58:40 GMT
+X-Kubernetes-Pf-Flowschema-Uid: 7a2e9841-9f3f-4f72-8783-007c1013b601
+X-Kubernetes-Pf-Prioritylevel-Uid: 6d646d8c-90d6-4156-ab8a-b22d190a053d
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"events.k8s.io/v1","resources":[{"name":"events","singularName":"","namespaced":true,"kind":"Event","verbs":["create","delete","deletecollection","get","list","patch","update","watch"],"shortNames":["ev"],"storageVersionHash":"r2yiGXH7wu8="}]}

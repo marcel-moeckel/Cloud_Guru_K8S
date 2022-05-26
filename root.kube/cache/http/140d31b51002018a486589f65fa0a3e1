@@ -1,0 +1,9 @@
+HTTP/2.0 200 OK
+Content-Length: 136
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Thu, 26 May 2022 08:58:40 GMT
+X-Kubernetes-Pf-Flowschema-Uid: 7a2e9841-9f3f-4f72-8783-007c1013b601
+X-Kubernetes-Pf-Prioritylevel-Uid: 6d646d8c-90d6-4156-ab8a-b22d190a053d
+
+{"kind":"APIVersions","versions":["v1"],"serverAddressByClientCIDRs":[{"clientCIDR":"0.0.0.0/0","serverAddress":"172.31.29.247:6443"}]}

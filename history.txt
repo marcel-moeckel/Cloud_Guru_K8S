@@ -1,0 +1,139 @@
+    1  apt upgrade -y
+    2  curl http://169.254.169.254/latest/meta-data/instance-id
+    3  apt update
+    4  apt upgrade
+    5  apt install -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+    6  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+    7  add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+    8  apt update
+    9  apt install -y docker-ce docker-ce-cli containerd.io
+   10  docker version
+   11  usermod -aG docker cloud_user
+   12  vi /etc/sysctl.d/99-kubernetes.conf
+   13  sysctl --system
+   14  vi /etc/sysctl.d/99-kubernetes.conf
+   15  systemctl edit docker
+   16  curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
+   17  apt update
+   18  apt install -y kubelet=1.21.0-00 kubectl=1.21.0-00 kubeadm=1.21.0-00
+   19  kubeadm version
+   20  vi /etc/kubernetes/audit.yaml
+   21  vi /etc/kubernetes/audit.yamli
+   22  mv /etc/kubernetes/audit.yamli /etc/kubernetes/audit.yaml
+   23  vi /etc/hosts
+   24  kubeadm config  print init-defaults > init-master.yaml
+   25  vi init-master.yaml 
+   26  cp init-master.yaml /etc/kubernetes/manifests/
+   27  kubeadm init --config /etc/kubernetes/manifests/init-master.yaml 
+   28  kubectl get nodes
+   29  export KUBECONFIG=/etc/kubernetes/admin.conf
+   30  kubectl get nodes
+   31  cat /etc/kubernetes/admin.conf
+   32  kubectl get nodes
+   33  vi canal_docker.yamli
+   34  mv canal_docker.yamli canal_docker.yaml
+   35  kubectl apply -f canal_docker.yaml 
+   36  kubectl get nodes
+   37  kubectl get pods -A
+   38  ip route
+   39  k9s
+   40  snap install k9s
+   41  kubectl get nodes
+   42  cat .bashrc 
+   43  vi .bashrc 
+   44  exit
+   45  kubectl get nodes
+   46  cp /etc/kubernetes/admin.conf /home/cloud_user/.kube
+   47  cd /home/cloud_user/.kube
+   48  ll
+   49  chown cloud_user:cloud_user admin.conf 
+   50  kubectl get nodes
+   51  cd 
+   52  kubectl get nodes
+   53  ip route
+   54  kubectl get nodes
+   55  ll
+   56  kubectl get nodes
+   57  export KUBECONFIG=/etc/kubernetes/admin.conf 
+   58  kubectl get nodes
+   59  echo "KUBECONFIG=/etc/kubernetes/admin.conf" >> .bashrc 
+   60  kubectl get nodes
+   61  history
+   62  export KUBECONFIG=/etc/kubernetes/admin.conf
+   63  kubectl get nodes
+   64  ip a
+   65  systemctl status docker
+   66  kubeadm version
+   67  kubectl get system
+   68  ip a
+   69  kubectl cluster-info
+   70  kubeadm init --config /etc/kubernetes/manifests/init-master.yaml 
+   71  cat /etc/hosts
+   72  ping 172.31.29.247
+   73  kubectl cluster-info
+   74  echo test | telnet 172.31.29.247:6443
+   75  echo test | telnet 172.31.29.247 6443
+   76  kubeadm reset
+   77  kubeadm init --config /etc/kubernetes/manifests/init-master.yaml 
+   78  cp init-master.yaml /etc/kubernetes/manifests/
+   79  kubeadm init --config /etc/kubernetes/manifests/init-master.yaml 
+   80  kubectl get nodes
+   81  history
+   82  kubectl get nodes
+   83  chmod o+r /etc/kubernetes/admin.conf
+   84  kubectl get nodes
+   85  ip a
+   86  kubectl get nodes
+   87  ll
+   88  kubectl get nodes
+   89  kubectl apply -f canal_docker.yaml
+   90  kubectl get nodes
+   91  ip a
+   92  kubectl get nodes
+   93  kubectl get service
+   94  kubectl get pods -A
+   95  vi pod.txt
+   96  mv pod.txt pod.yaml
+   97  kubectl apply -f pod.yaml 
+   98  kubectl get pod -o wide
+   99  kubectl get nodes
+  100  exit
+  101  ll
+  102  kubectl delete -f pod.yaml
+  103  kubectl get nodes
+  104  kubectl get pod
+  105  vi deployment.txt
+  106  mv deployment.txt deployment.yaml
+  107  kubectl apply -f deployment.yaml 
+  108  kubectl get pod
+  109  watch kubectl get pod -o wide
+  110  kubectl get nodes
+  111  watch kubectl get pod -o wide
+  112  vi deployment.yaml 
+  113  watch kubectl get pod -o wide
+  114  kubectl get nodes
+  115  kubectl get pod
+  116  kubectl get pod -o wide
+  117  cd
+  118  mkdir Repos
+  119  cd Repos
+  120  ssh-keygen -t ed25519 -f marcel_$HOSTNAME
+  121  git init
+  122  vi ~/.ssh/config
+  123  cd .ssh
+  124  cd ..
+  125  cd Repos/
+  126  ll
+  127  cat marcel_fd9b7461441c.mylabserver.com.pub
+  128  git@github.com:marcel-moeckel/Cloud_Guru_K8S.git
+  129  git clone git@github.com:marcel-moeckel/Cloud_Guru_K8S.git
+  130  git add .
+  131  vi .git/config
+  132  git clone git@github.com:marcel-moeckel/Cloud_Guru_K8S.git
+  133  git init
+  134  git clone git@github.com:marcel-moeckel/Cloud_Guru_K8S.git
+  135  ll
+  136  vi ~/.ssh/config
+  137  git clone git@github.com:marcel-moeckel/Cloud_Guru_K8S.git
+  138  history
+  139  history > history.txt
